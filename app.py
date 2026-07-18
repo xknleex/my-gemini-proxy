@@ -842,12 +842,7 @@ def main():
     except KeyboardInterrupt:
         print("\nStopped.")
         server.shutdown()
+
+
 if __name__ == "__main__":
-    import sys
-    import os
-    
-    # Cloud platforms dynamically pass a port via environment variables
-    port = os.environ.get("PORT", "8000")
-    sys.argv.extend(["--port", port])
-    
     main()
